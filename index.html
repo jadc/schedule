@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="script.js"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <title>schedule</title>
+    </head>
+
+    <body>
+        <div class="content">
+
+            <div class="head">
+                <img draggable="false" onmousedown="return false" style="user-drag: none" src="data:image/png;base64,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">
+                <h1>Schedule</h1>
+            </div>
+
+            <div class="body">
+                
+                <div class="time">-:-- --</div>
+                <div class="subject">???</div>
+                
+                <div class="scheduletable">
+                    <table>
+
+                        <thead>
+                            <th id="tclm">Times</th>
+                            <th>Mon.</th>
+                            <th>Tue.</th>
+                            <th>Wed.</th>
+                            <th>Thu.</th>
+                            <th>Fri.</th>
+                        </thead>
+
+                        <tbody>
+                            <!-- Block 1 -->
+                            <tr id="block1">
+                                <td id="tclm">8:30<span> - </span>9:25</td>
+                                <td>Science</td>
+                                <td>Science</td>
+                                <td>Social</td>
+                                <td>French</td>
+                                <td>Math</td>
+                            </tr>
+
+                            <!-- Block 2 -->
+                            <tr id="block2">
+                                <td id="tclm">9:30<span> - </span>10:25</td>
+                                <td>Gym</td>
+                                <td>Social</td>
+                                <td>Math</td>
+                                <td>Option</td>
+                                <td>Gym</td>
+                            </tr>
+
+                            <!-- Block 3 -->
+                            <tr id="block3">
+                                <td id="tclm">10:30<span> - </span>11:25</td>
+                                <td>Social</td>
+                                <td>French</td>
+                                <td>Math</td>
+                                <td>Option</td>
+                                <td>Social</td>
+                            </tr>
+
+                            <!-- Lunch (Block 4) -->
+                            <tr id="block4">
+                                <td id="tclm">11:30<span> - </span>12:10</td>
+                                <td colspan="5">Lunch</td>
+                            </tr>
+
+                            <!-- Block 5 -->
+                            <tr id="block5">
+                                <td id="tclm">12:15<span> - </span>1:10</td>
+                                <td>L.A.</td>
+                                <td>Math</td>
+                                <td>Fine Art</td>
+                                <td>Science</td>
+                                <td>French</td>
+                            </tr>
+
+                            <!-- Block 6 -->
+                            <tr id="block6">
+                                <td id="tclm">1:15<span> - </span>2:05</td>
+                                <td>Math</td>
+                                <td>L.A.</td>
+                                <td>L.A.</td>
+                                <td>L.A.</td>
+                                <td>Fine Art</td>
+                            </tr>
+
+                            <!-- Block 7 -->
+                            <tr id="block7">
+                                <td id="tclm">2:10<span> - </span>3:00</td>
+                                <td>Fine Art</td>
+                                <td>Health</td>
+                                <td>Science</td>
+                                <td id="blank"></td>
+                                <td>L.A.</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="version">! JS FAILED TO UPDATE !</p>
+
+    </body>
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+
+    -webkit-touch-callout: none;
+    user-select: none;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAABkElEQVRYR82XT2+CQBDFifSgifFiuJWLBxITT8QTSen3/1LQ97OzOK5asUK3L3nZZWb2DfsPdrOx6LouFwuxEmuxEVsjdWz4iMmt2euQ2MqEP/q+/xxDYq3NymSeh4QWEtiJbZxgLGmLhuoLkx0H3lw83hCkZwexFLfixkgdG76rkZLtKI4bDQWuxSYSYI5L1d8s7C6IIfaOxtrCbkMB9DxuuFf5MHEM2ljbi5dQubSQS8jBnA/Drjp8N/evgQZaTpcc12tCDhaLD3w5eQBakfbOXN+QgaEfVrvqe3NNBjSdPrvjvCj1UDkn8/T0nD8CmqYd8lQnhyp84Yato3p5cswAtF0etnSOsfBGlZP3PgBtyxHyFfHwHyx2NpDD5asw1M4w2/AHkMPlqzH4hbG1uNlADpevweC338biZgM5XL72X7xA8ilIvgiTb8PkH6K0n2JzpPsZAT2k/R0DGdIdSIAcaY9kQM50h9IABaU7lgeowVLBk15MVP7c8xhqkO5q5iEB1sXfX05jSGyG63mWfQG6OMy5Eg8acwAAAABJRU5ErkJggg==), auto;
+}
+
+body {
+    background-color: black;
+    padding: 1em;
+}
+
+.content {
+    background-color: rgb(10,10,10);
+    border-radius: 3px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    text-align: center;
+
+    margin: auto;
+    width: 80vw;
+}
+
+.head {
+    background-color: rgb(5,5,5);
+    padding: 2em;
+    padding-bottom: 1em;
+    border-radius: 3px;
+}
+
+.body {
+    font-size: 135%;
+}
+
+.time {
+    display: inline-block;
+    padding: 0 0.5em 0 0.5em;
+    font-size: 3em;
+    margin: 0.25em auto;
+    border-radius: 0.5em;
+    background-color: rgb(15,15,15);
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+
+.subject {
+    font-size: 0.6em;
+    color: rgb(60,60,60);
+    font-weight: 900;
+}
+
+.scheduletable {
+    padding: 0.75em;
+    margin: 0 3em 0 3em;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    
+}
+
+table,th,td {
+    border: 5px solid rgb(15,15,15);
+    background-color: rgb(20,20,20);
+    padding: 0.5em;
+}
+
+tbody tr td {
+    font-size: 1.5vw;
+}
+
+#blank { background-color: rgb(15,15,15); }
+
+.version {
+    position: fixed;
+    bottom: 0;
+    font-size: 16px;
+    font-family: monospace;
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border-radius: 0.5em;
+    opacity: 0.5;
+    display: none;
+}
+
+@media (max-width: 1120px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .time {
+        font-size: 10vw;
+    }
+
+    .scheduletable {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        padding-top: 1em;
+        margin: 0;
+    }
+
+    tbody tr td {
+        font-size: 4vw;
+    }
+
+    #tclm {
+        display: none;
+    }
+
+    thead {
+        font-size: 5vw;
+    }
+    
+    /* head */
+    .head {
+        padding: 1em;
+    }
+
+    .head h1 {
+        display: none;
+    }
+
+    .head img {
+        width: 3em;
+        height: auto;
+    }
+}
